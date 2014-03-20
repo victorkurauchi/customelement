@@ -1,0 +1,42 @@
+<link rel="import" href="../app/bower_components/polymer-jsonp/polymer-jsonp.html">
+<link rel="import" href="../app/bower_components/polymer-ajax/polymer-ajax.html">
+<link rel="import" href="../app/bower_components/polymer-ajax/polymer-xhr.html">
+
+<polymer-element name="x-trampos" attributes="clientId tag count itensPerRow">
+    <template>
+
+        <polymer-ajax id="ajax" auto url="http://trampos.co/api/oportunidades.json" handleAs="json"></polymer-ajax>
+
+        <div class="lista">
+            <ul>
+                <template id="jobs" repeat="{{item in jobs}}" index="i">
+                    <li id="{{item.id}}">VAGAS: trampos.co</li>
+                    <li>{{item.name}} - {{item.company_name}}</li>
+                </template>
+            </ul>
+        </div>
+    
+    </template>
+    <script>
+        Polymer('x-trampos', {
+            
+            count: 30,
+
+            itensPerRow: 10,
+
+            jobs: [],
+
+            ready: function () {
+                this.$.jobs.model = this.jobs;
+                this.$.ajax.addEventListener('polymer-response',
+                    function (e) {
+                        console.log(e.detail.response);
+                        this.jobs = {jobs: e.detail.response};
+                        this.$.jobs.model = {jobs: e.detail.response};
+                        this.fire('x-trampos-load', {response: e.detail.response});
+                    }.bind(this)
+                );
+            }
+        });
+    </script>
+</polymer-element>
