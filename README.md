@@ -2,16 +2,7 @@
 
 x-trampos é uma adaptação de um widget existente, utilizando [Polymer](http://polymer-project.org) e o conceito de [web components](http://customelements.io/)
 
-> Implementado por [@victorkurauchi](https://twitter.com/victorkurauchi).
-> Forked from [x-instagram](https://github.com/addyosmani/x-instagram), by [addyosmani](https://github.com/addyosmani)
-
-## Instalação
-
-Using [Bower](http://bower.io), run:
-
-```bash
-$ bower install --save x-instagram
-```
+> Implementado por [@victorkurauchi](https://twitter.com/victorkurauchi). Fork: [x-instagram](https://github.com/addyosmani/x-instagram), por [addyosmani](https://github.com/addyosmani)
 
 ## Utilização
 
@@ -58,10 +49,10 @@ $ grunt connect
 
 ## Options
 
-Atributo  | Opção                   | Default             | Descrição
+Atributo  | Opção                   | Padrão             | Descrição
 ---        | ---                       | ---                 | ---
-`itensPerRow`      | *integer*       | `10`               | Quantidade de itens exibidos na listagem
-`url`   | *string*                     | See source               | Url de onde os registros virão
+`itensPerRow`      | *int*       | `5`               | Quantidade de itens exibidos na listagem
+`url`   | *string*                     | -               | Url para buscar registros 
 
 ## License
 

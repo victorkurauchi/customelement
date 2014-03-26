@@ -2,17 +2,38 @@
 <link rel="import" href="../app/bower_components/polymer-ajax/polymer-ajax.html">
 <link rel="import" href="../app/bower_components/polymer-ajax/polymer-xhr.html">
 
-<polymer-element name="x-trampos" attributes="clientId tag count itensPerRow url">
+<polymer-element name="x-trampos" attributes="itensPerRow url">
     <template>
+
+        <style>
+            li {
+                list-style: none;
+                padding: 10px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: bold;
+                clear: right;
+            }
+
+            span {
+                font-size: 12px;
+            }
+        </style>
 
         <polymer-ajax id="ajax" auto url="{{url}}" handleAs="json"></polymer-ajax>
 
         <div class="lista">
             <ul>
+                <li id="{{item.id}}">VAGAS: trampos.co & lorem ipsum sid</li>
                 <template id="jobs" repeat="{{item in jobs}}" index="i">
-                    <li id="{{item.id}}">VAGAS: trampos.co</li>
-                    <li>{{item.name}} - {{item.company_name}}</li>
+                    <li>
+                        <p>{{item.name}} </p>
+                        <span>{{item.company_name}} </span>
+                    </li>
                 </template>
+                <li> --- logo trampos aqui --- </li>
             </ul>
         </div>
     
@@ -20,9 +41,9 @@
     <script>
         Polymer('x-trampos', {
             
-            count: 30,
+            itensPerRow: 5,
 
-            itensPerRow: 10,
+            url : '',
 
             jobs: [],
 
