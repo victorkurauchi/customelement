@@ -47,7 +47,7 @@ $ npm install
 $ grunt connect
 ```
 
-## Options
+## Opções
 
 Atributo  | Opção                   | Padrão             | Descrição
 ---        | ---                       | ---                 | ---
