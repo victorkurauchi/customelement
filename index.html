@@ -2,19 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>&lt;x-instagram&gt;</title>
+    <title>Custom elements</title>
 
     <!-- Importing Web Component's Polyfill -->
     <script src="app/bower_components/platform/platform.js"></script>
 
     <!-- Importing Custom Elements -->
-    <link rel="import" href="src/x-instagram.html">
     <link rel="import" href="src/x-trampos.html">
 </head>
 <body>
-    <h1>custom elements.</h1>
+    <h1>Custom Elements - trampos.co</h1>
 
-    <x-trampos itensPerRow="5"></x-trampos>
+    <x-trampos itensPerRow="5" url="http://trampos.co/api/oportunidades.json"></x-trampos>
 
 </body>
 </html>

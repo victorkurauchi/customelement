@@ -1,14 +1,11 @@
-# &lt;x-instagram&gt;
+# trampos.co Custom Element
 
-A [Polymer](http://polymer-project.org) element for querying results from the [Instagram API](http://instagram.com/developer/)
+x-trampos é uma adaptação de um widget existente, utilizando [Polymer](http://polymer-project.org) e o conceito de [web components](http://customelements.io/)
 
-> Maintained by [Addy Osmani](https://github.com/addyosmani).
+> Implementado por [@victorkurauchi](https://twitter.com/victorkurauchi).
+> Forked from [x-instagram](https://github.com/addyosmani/x-instagram), by [addyosmani](https://github.com/addyosmani)
 
-## Demo
-
-> [Check it live](http://addyosmani.github.io/x-instagram).
-
-## Install
+## Instalação
 
 Using [Bower](http://bower.io), run:
 
@@ -16,24 +13,24 @@ Using [Bower](http://bower.io), run:
 $ bower install --save x-instagram
 ```
 
-## Usage
+## Utilização
 
-1. Import Web Components' polyfill:
+1. Web Components' polyfill:
 
 ```html
 <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.1.4/platform.js"></script>
 ```
 
-2. Import Custom Element:
+2. Custom Element:
 
 ```html
-<link rel="import" href="src/x-instagram.html">
+<link rel="import" href="src/x-trampos.html">
 ```
 
-3. Start using it!
+3. Inicialização
 
 ```html
-<x-instagram><x-instagram>
+<x-trampos><x-trampos>
 ```
 
 ## Setup
@@ -61,20 +58,10 @@ $ grunt connect
 
 ## Options
 
-Attribute  | Options                   | Default             | Description
+Atributo  | Opção                   | Default             | Descrição
 ---        | ---                       | ---                 | ---
-`tag`      | *string*                  | ``               | The tag to query for (e.g 'selfie')
-`count`      | *integer*       | `30`               | The max number of results to return
-`photosPerRow`      | *integer*       | `10`               | The number of photos that will show up on a row
-`clientId`   | *string*                     | See source               | An Instagram API developer client Id
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+`itensPerRow`      | *integer*       | `10`               | Quantidade de itens exibidos na listagem
+`url`   | *string*                     | See source               | Url de onde os registros virão
 
 ## License
 

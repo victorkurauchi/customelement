@@ -2,10 +2,10 @@
 <link rel="import" href="../app/bower_components/polymer-ajax/polymer-ajax.html">
 <link rel="import" href="../app/bower_components/polymer-ajax/polymer-xhr.html">
 
-<polymer-element name="x-trampos" attributes="clientId tag count itensPerRow">
+<polymer-element name="x-trampos" attributes="clientId tag count itensPerRow url">
     <template>
 
-        <polymer-ajax id="ajax" auto url="http://trampos.co/api/oportunidades.json" handleAs="json"></polymer-ajax>
+        <polymer-ajax id="ajax" auto url="{{url}}" handleAs="json"></polymer-ajax>
 
         <div class="lista">
             <ul>
